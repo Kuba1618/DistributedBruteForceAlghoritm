@@ -64,7 +64,8 @@ namespace WindowsFormsApplication1
 
         public void SaveResultToFile(string text)
         {
-            string path1 = @"C:\Users\jakub\Desktop\" + "passwords" + ".txt";
+            string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString() + "\\passwords" + ".txt";
+            
             DateTime thisMoment = DateTime.Now;
             if (!File.Exists(path1))
             {
