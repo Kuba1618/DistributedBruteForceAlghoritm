@@ -1,0 +1,7 @@
+D:\PŚK\PSR\Projekt\PROJEKT\hashing\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+D:\PŚK\PSR\Projekt\PROJEKT\hashing\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\PŚK\PSR\Projekt\PROJEKT\hashing\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\PŚK\PSR\Projekt\PROJEKT\hashing\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\PŚK\PSR\Projekt\PROJEKT\hashing\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\PŚK\PSR\Projekt\PROJEKT\hashing\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\PŚK\PSR\Projekt\PROJEKT\hashing\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
