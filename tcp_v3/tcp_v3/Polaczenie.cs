@@ -132,7 +132,7 @@ namespace tcp_v3
             }
             catch (Exception e1)
             {
-                Console.WriteLine("Siakiś błąd: " + e1.Message);
+                Console.WriteLine("Jakiś błąd: " + e1.Message);
                 return false;
             }
             return true;
