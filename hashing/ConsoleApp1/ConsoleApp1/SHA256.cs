@@ -4,7 +4,7 @@ using System.Text;
 
 public class Program
 {
-    public static void Main1()
+    public static void Main1111()
     {
         string password = "test";
         using (SHA256 sha256Hash = SHA256.Create())

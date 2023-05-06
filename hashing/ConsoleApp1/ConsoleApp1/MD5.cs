@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -11,10 +12,20 @@ namespace ConsoleApp1
     {
         public static void Main()
         {
-            string password = "test";
-            string s = CreateMD5(password);
+            /* string password = "test";
+             string s = CreateMD5(password);
 
-            Console.WriteLine($"MD5 hash for {password}: {s}");
+             Console.WriteLine($"MD5 hash for {password}: {s}");
+             Console.ReadLine();*/
+            //Generator generator = new Generator();
+            //generator.displayPermutations();
+            //generator.generateAll();
+
+            String str = "AB1";
+            Console.Write("All permutations with repetition of {0} are: \n", str);
+            GFG.allLexicographic(str);
+
+
             Console.ReadLine();
         }
 

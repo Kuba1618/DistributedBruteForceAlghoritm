@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1
 {
     class BruteForce
     {
-        private static String password; //521ab
+        private static String password; //password less than 5 characters 
         public static StringBuilder str = new StringBuilder("");
         private static int min = 32, max = 127;
         private static DateTime start;
