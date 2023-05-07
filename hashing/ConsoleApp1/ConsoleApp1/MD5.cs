@@ -21,12 +21,13 @@ namespace ConsoleApp1
             //generator.displayPermutations();
             //generator.generateAll();
 
-            /*String str = "AB1";
+            String str = "AB1";
+            int maxLength = 3;
             Console.Write("All permutations with repetition of {0} are: \n", str);
-            GFG.allLexicographic(str);*/
+            GFG.allLexicographic(str, maxLength);
 
-            BruteForce bruteForce = new BruteForce("abc");
-            bruteForce.RunAlghoritm();
+            /*BruteForce bruteForce = new BruteForce("abc");
+            bruteForce.RunAlghoritm();*/
 
 
             Console.ReadLine();
