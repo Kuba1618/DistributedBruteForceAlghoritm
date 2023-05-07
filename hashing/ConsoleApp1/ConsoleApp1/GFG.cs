@@ -25,13 +25,13 @@ namespace ConsoleApp1
             }
         }
 
-        public static void allLexicographic(String str,int maxLength)
+        public static void allLexicographic(String str,int minStrLength,int maxStrLength)
         {
-            int length = maxLength;
+            int maxLength = maxStrLength;
 
-            for (int i = 0; i < maxLength; i++)
+            for (int i = minStrLength - 1; i < maxStrLength; i++)
             {
-                char[] data = new char[length + 1];
+                char[] data = new char[maxLength + 1];
                 char[] temp = str.ToCharArray();
 
                 Array.Sort(temp);
