@@ -18,20 +18,21 @@ namespace ConsoleApp1
              Console.ReadLine();*/
 
             ///////////////////////////
-            String str = "AB1";
+            /*String str = "AB1";
             int minStrLength = 1;
             int maxStrLength = 3;
 
             Console.Write("All permutations with repetition of {0} are: \n", str);
             GFG.allLexicographic(str, minStrLength, maxStrLength);
-            GFG.GetBound(5);
+            GFG.GetBoundFromFile(5);
 
-            Console.ReadLine();
+            Console.ReadLine();*/
             ///////////////////////////
 
-            /*BruteForce bruteForce = new BruteForce("abc");
-            bruteForce.RunAlghoritm();
-            Console.ReadLine();*/
+            BruteForce bruteForce = new BruteForce("abc");
+            //bruteForce.Alghoritm();
+            bruteForce.GetPassword();
+            Console.ReadLine();
         }
 
         public static string CreateMD5(string input)

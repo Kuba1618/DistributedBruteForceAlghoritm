@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace ConsoleApp1
@@ -10,13 +11,19 @@ namespace ConsoleApp1
         public static StringBuilder str = new StringBuilder("");
         private static int min = 32, max = 127;
         private static DateTime start;
+        private static string path = @"D:\PŚK\PSR\Projekt\rockyou.txt";
+
+        public BruteForce()
+        {
+
+        }
 
         public BruteForce(String password1)
         {
             password = password1;
         }
 
-        public void RunAlghoritm()
+        public void Alghoritm()
         {
             start = DateTime.Now;
 
@@ -51,12 +58,12 @@ namespace ConsoleApp1
                 //if(HASŁO ZNALEZIONE)
                 if (str.ToString().Equals(password))
                 {
-                    DateTime stop = DateTime.Now;
-                    TimeSpan czasWykonania = stop - start;
-                    int czasLiczbowy = Convert.ToInt32(czasWykonania.TotalMilliseconds);
+                    //DateTime stop = DateTime.Now;
+                    //TimeSpan czasWykonania = stop - start;
+                    //int czasLiczbowy = Convert.ToInt32(czasWykonania.TotalMilliseconds);
                     StringBuilder str1 = new StringBuilder("");
                     str1.Append("" + password);
-                    str1.Append(";" + czasLiczbowy + "ms");
+                    //str1.Append(";" + czasLiczbowy + "ms");
                     SaveResultToFile(str1 + "");
                     Console.WriteLine(str1 + "");
                     Console.ReadLine();
@@ -92,6 +99,18 @@ namespace ConsoleApp1
                 {
                     sw.WriteLine(text);
                 }
+            }
+        }
+
+        public void GetPassword()
+        {
+            //string contents = File.ReadAllText(path);
+            //Console.WriteLine(contents);
+
+            int numberOfFileLines = File.ReadLines(path).Count();
+            for (int i = 1; i < 5; i++)
+            {
+                Console.WriteLine(File.ReadLines(path).Skip(i-1).Take(1).First());
             }
         }
     }

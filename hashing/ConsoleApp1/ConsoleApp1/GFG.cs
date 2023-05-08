@@ -79,7 +79,7 @@ namespace ConsoleApp1
             }
         }
 
-        public static void GetBound(int numberOfComputers)
+        public static void GetBoundFromFile(int numberOfComputers)
         {
             int numberOfFileLines = File.ReadLines(path).Count();
             int numberOfLines = numberOfFileLines / numberOfComputers;
