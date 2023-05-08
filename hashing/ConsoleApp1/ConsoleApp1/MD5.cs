@@ -7,14 +7,11 @@ namespace ConsoleApp1
 {
     class MD5
     {
+        private static DateTime start;
+
         public static void Main()
         {
-            /*string password = "AlaMaKota1234!";
-            string s = CreateMD5(password);
-            Console.WriteLine($"MD5 hash for {password}: {s}");
-            Console.ReadLine();*/
-
-            /*///////////////////////////
+            /*//-------Run GFG class (combinations generator)------------
             String str = "ABC";
             int minStrLength = 1;
             int maxStrLength = 3;
@@ -24,13 +21,20 @@ namespace ConsoleApp1
             GFG.GetBoundFromFile(5);
 
             Console.ReadLine();
-            ///////////////////////////*/
+            //------------ End of GFG --------------*/
+
+            start = DateTime.Now;
+            BreakPasswords();
+            Console.ReadLine(); 
 
             /*BruteForce bruteForce = new BruteForce();
             bruteForce.GetPasswordAndRunAlgorithm();
             Console.ReadLine();*/
 
-            BreakPasswords();
+            /*string password = "AlaMaKota1234!";
+            string s = CreateMD5(password);
+            Console.WriteLine($"MD5 hash for {password}: {s}");
+            Console.ReadLine();*/
         }
 
         public static void BreakPasswords()
@@ -44,7 +48,13 @@ namespace ConsoleApp1
                 BruteForce(password);
             }
 
-            Console.ReadLine();
+            //Koniec mierzenia czasu
+            DateTime stop = DateTime.Now;
+            TimeSpan czasWykonania = stop - start;
+            int czasLiczbowy = Convert.ToInt32(czasWykonania.TotalMilliseconds);
+            Console.WriteLine("It took about:  " + czasLiczbowy + "ms");
+            Console.WriteLine("It took about:  " + czasLiczbowy/numberOfFileLines + "ms / hasło");
+            Console.WriteLine("It took about:  " + czasWykonania.TotalSeconds + "s");
         }
 
         public static void BruteForce(string password1)

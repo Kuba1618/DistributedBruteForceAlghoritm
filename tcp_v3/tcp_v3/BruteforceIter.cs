@@ -2,13 +2,13 @@
 using System.Collections;
 using System.IO;
 using System.Text; 
-namespace ConsoleApp1
+namespace WindowsFormsApplication1
 {
     public class BruteforceIter : IEnumerable
     {
         #region constructors 
         private StringBuilder sb = new StringBuilder();
-        
+
         //the string we want to permutate 
         public string alphabet = "!#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
         private ulong len;
@@ -46,7 +46,7 @@ namespace ConsoleApp1
             return sb.ToString();
         }
 
-        public  void SaveResultToFile(string text)
+        public void SaveResultToFile(string text)
         {
             string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString() + "\\passwords" + ".txt";
 
