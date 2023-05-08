@@ -22,10 +22,11 @@ namespace ConsoleApp1
             //generator.generateAll();
 
             String str = "AB1";
-            int minStrLength = 2;
+            int minStrLength = 1;
             int maxStrLength = 3;
             Console.Write("All permutations with repetition of {0} are: \n", str);
             GFG.allLexicographic(str, minStrLength, maxStrLength);
+            GFG.GetBound(5);
 
             /*BruteForce bruteForce = new BruteForce("abc");
             bruteForce.RunAlghoritm();*/

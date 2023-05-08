@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -11,6 +9,7 @@ namespace ConsoleApp1
 
     public class GFG
     {
+        private static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString() + "\\combinations" + ".txt";
         private static StringBuilder stringBuilder = new StringBuilder("");
         private static StringBuilder stringBuilderLocal = new StringBuilder("");
 
@@ -64,7 +63,6 @@ namespace ConsoleApp1
             DateTime thisMoment = DateTime.Now;
             if (!File.Exists(path))
             {
-                // Create a file to write to.
                 using (StreamWriter sw = File.CreateText(path))
                 {
                     sw.WriteLine(text);
@@ -72,13 +70,35 @@ namespace ConsoleApp1
             }
             else
             {
-                // This text is always added, making the file longer over time
-                // if it is not deleted.
                 using (StreamWriter sw = File.AppendText(path))
                 {
                     sw.WriteLine(text);
                 }
             }
+        }
+
+        public static void GetBound(int numberOfComputers)
+        {
+            int numberOfFileLines = File.ReadLines(path).Count();
+            int numberOfLines = numberOfFileLines / numberOfComputers;
+            Console.WriteLine(numberOfLines + "");
+
+            for (int i = 1; i < numberOfFileLines; i += numberOfLines)
+            {
+                if(i + numberOfLines - 1 > numberOfFileLines)
+                {
+                    //Console.WriteLine(i + "-" + numberOfFileLines);
+                    Console.WriteLine(File.ReadLines(path).Skip(i - 1).Take(1).First() + "- " + File.ReadLines(path).Skip(numberOfFileLines - 1).Take(1).First());
+                }
+                else
+                {
+                    //Console.WriteLine(i + "-" + (i + numberOfLines - 1));
+                    Console.WriteLine(File.ReadLines(path).Skip(i - 1).Take(1).First() + "- " + File.ReadLines(path).Skip(i + numberOfLines - 2).Take(1).First());
+                }
+                //@ToDo zrobić odczyt konkretnych linii z pliku (np. a - aa)
+                
+            }
+
         }
 
         /*public static void Main(String[] args)
