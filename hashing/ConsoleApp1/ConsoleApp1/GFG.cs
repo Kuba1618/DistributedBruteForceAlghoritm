@@ -6,7 +6,6 @@ using System.Text;
 namespace ConsoleApp1
 {
     // This code was created out of inspiration by PrinciRaj1992 code (user from geeksforgeeks.org) - we adjust it to our project & add some functionality
-
     public class GFG
     {
         private static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString() + "\\combinations" + ".txt";

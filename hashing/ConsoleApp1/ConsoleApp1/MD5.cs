@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -12,13 +9,13 @@ namespace ConsoleApp1
     {
         public static void Main()
         {
-            /* string password = "test";
-             string s = CreateMD5(password);
-             Console.WriteLine($"MD5 hash for {password}: {s}");
-             Console.ReadLine();*/
+            /*string password = "AlaMaKota1234!";
+            string s = CreateMD5(password);
+            Console.WriteLine($"MD5 hash for {password}: {s}");
+            Console.ReadLine();*/
 
-            ///////////////////////////
-            /*String str = "AB1";
+            /*///////////////////////////
+            String str = "ABC";
             int minStrLength = 1;
             int maxStrLength = 3;
 
@@ -26,14 +23,56 @@ namespace ConsoleApp1
             GFG.allLexicographic(str, minStrLength, maxStrLength);
             GFG.GetBoundFromFile(5);
 
-            Console.ReadLine();*/
-            ///////////////////////////
+            Console.ReadLine();
+            ///////////////////////////*/
 
-            BruteForce bruteForce = new BruteForce("abc");
-            //bruteForce.Alghoritm();
-            bruteForce.GetPassword();
+            /*BruteForce bruteForce = new BruteForce();
+            bruteForce.GetPasswordAndRunAlgorithm();
+            Console.ReadLine();*/
+
+            BreakPasswords();
+        }
+
+        public static void BreakPasswords()
+        {
+            string path = @"D:\PŚK\PSR\Projekt\hasla.txt";
+            int numberOfFileLines = File.ReadLines(path).Count();
+
+            for (int i = 1; i < numberOfFileLines; i++)
+            {
+                string password = File.ReadLines(path).Skip(i - 1).Take(1).First();
+                BruteForce(password);
+            }
+
             Console.ReadLine();
         }
+
+        public static void BruteForce(string password1)
+        {
+            BruteforceIter b = new BruteforceIter();
+            b.min = 2;
+            b.max = 4;
+            b.alphabet = "!#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+
+            foreach (string result in b)
+            {
+                //Console.Write(result + "\r");
+                if (result == password1)
+                {
+                    Console.WriteLine(result);
+                    b.SaveResultToFile(result);
+                    return;
+                }
+            }
+            
+        }
+
+
+
+
+
+
+
 
         public static string CreateMD5(string input)
         {
@@ -50,7 +89,7 @@ namespace ConsoleApp1
                  {
                      sb.Append(hashBytes[i].ToString("X2"));
                  }
-                 return sb.ToString();
+                 return sb.ToString().ToLower();
             }
         }
     }

@@ -11,7 +11,7 @@ namespace ConsoleApp1
         public static StringBuilder str = new StringBuilder("");
         private static int min = 32, max = 127;
         private static DateTime start;
-        private static string path = @"D:\PŚK\PSR\Projekt\rockyou.txt";
+        private static string path = @"D:\PŚK\PSR\Projekt\hasla.txt";
 
         public BruteForce()
         {
@@ -23,8 +23,11 @@ namespace ConsoleApp1
             password = password1;
         }
 
-        public void Alghoritm()
+        public void Alghoritm(String pass)
         {
+            bool passwordFound;
+            password = pass;
+            Console.WriteLine("pass: {0}", password);
             start = DateTime.Now;
 
             while (true)
@@ -36,8 +39,9 @@ namespace ConsoleApp1
                     for (int j = min; j < max; j++)
                     {
                         str[i] = (char)j;
-                        bool passwordFound = bruteForceAlghoritm(i + 1);
-                        if(passwordFound)
+                        passwordFound = bruteForceAlghoritm(i + 1);
+                        //Console.WriteLine(passwordFound);
+                        if (passwordFound)
                         {
                             return;
                         }
@@ -58,15 +62,10 @@ namespace ConsoleApp1
                 //if(HASŁO ZNALEZIONE)
                 if (str.ToString().Equals(password))
                 {
-                    //DateTime stop = DateTime.Now;
-                    //TimeSpan czasWykonania = stop - start;
-                    //int czasLiczbowy = Convert.ToInt32(czasWykonania.TotalMilliseconds);
                     StringBuilder str1 = new StringBuilder("");
                     str1.Append("" + password);
-                    //str1.Append(";" + czasLiczbowy + "ms");
                     SaveResultToFile(str1 + "");
                     Console.WriteLine(str1 + "");
-                    Console.ReadLine();
                     return true;
                 }
 
@@ -85,7 +84,7 @@ namespace ConsoleApp1
             DateTime thisMoment = DateTime.Now;
             if (!File.Exists(path1))
             {
-                // Create a file to write to.
+                // Create alphabet file to write to.
                 using (StreamWriter sw = File.CreateText(path1))
                 {
                     sw.WriteLine(text);
@@ -102,15 +101,14 @@ namespace ConsoleApp1
             }
         }
 
-        public void GetPassword()
+        public void GetPasswordAndRunAlgorithm()
         {
-            //string contents = File.ReadAllText(path);
-            //Console.WriteLine(contents);
-
             int numberOfFileLines = File.ReadLines(path).Count();
             for (int i = 1; i < 5; i++)
             {
-                Console.WriteLine(File.ReadLines(path).Skip(i-1).Take(1).First());
+                //Console.WriteLine(File.ReadLines(path).Skip(i - 1).Take(1).First());
+                string s = File.ReadLines(path).Skip(i - 1).Take(1).First();
+                Alghoritm(s);
             }
         }
     }
