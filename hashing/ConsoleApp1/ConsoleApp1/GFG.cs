@@ -70,6 +70,8 @@ namespace ConsoleApp1
             }
             else
             {
+                System.IO.File.WriteAllText(path, string.Empty);
+
                 using (StreamWriter sw = File.AppendText(path))
                 {
                     sw.WriteLine(text);
@@ -87,16 +89,14 @@ namespace ConsoleApp1
             {
                 if(i + numberOfLines - 1 > numberOfFileLines)
                 {
-                    //Console.WriteLine(i + "-" + numberOfFileLines);
+                    Console.WriteLine(i + "-" + numberOfFileLines);
                     Console.WriteLine(File.ReadLines(path).Skip(i - 1).Take(1).First() + "- " + File.ReadLines(path).Skip(numberOfFileLines - 1).Take(1).First());
                 }
                 else
                 {
-                    //Console.WriteLine(i + "-" + (i + numberOfLines - 1));
+                    Console.WriteLine(i + "-" + (i + numberOfLines - 1));
                     Console.WriteLine(File.ReadLines(path).Skip(i - 1).Take(1).First() + "- " + File.ReadLines(path).Skip(i + numberOfLines - 2).Take(1).First());
                 }
-                //@ToDo zrobić odczyt konkretnych linii z pliku (np. a - aa)
-                
             }
 
         }
