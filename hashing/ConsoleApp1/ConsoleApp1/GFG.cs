@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    // This code is contributed by PrinciRaj1992 from geeksforgeeks.org
+    // This code was created out of inspiration by PrinciRaj1992 code (user from geeksforgeeks.org) - we adjust it to our project & add some functionality
 
     public class GFG
     {
@@ -89,27 +89,17 @@ namespace ConsoleApp1
             {
                 if(i + numberOfLines - 1 > numberOfFileLines)
                 {
-                    Console.WriteLine(i + "-" + numberOfFileLines);
+                    //Console.WriteLine(i + "-" + numberOfFileLines);
                     Console.WriteLine(File.ReadLines(path).Skip(i - 1).Take(1).First() + "- " + File.ReadLines(path).Skip(numberOfFileLines - 1).Take(1).First());
                 }
                 else
                 {
-                    Console.WriteLine(i + "-" + (i + numberOfLines - 1));
+                    //Console.WriteLine(i + "-" + (i + numberOfLines - 1));
                     Console.WriteLine(File.ReadLines(path).Skip(i - 1).Take(1).First() + "- " + File.ReadLines(path).Skip(i + numberOfLines - 2).Take(1).First());
                 }
             }
 
         }
-
-        /*public static void Main(String[] args)
-        {
-            String str = "AB1";
-            Console.Write("All permutations with repetition of {0} are: \n", str);
-            allLexicographic(str);
-            Console.ReadLine();
-
-
-        }*/
     }
 
 }

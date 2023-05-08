@@ -14,25 +14,24 @@ namespace ConsoleApp1
         {
             /* string password = "test";
              string s = CreateMD5(password);
-
              Console.WriteLine($"MD5 hash for {password}: {s}");
              Console.ReadLine();*/
-            //Generator generator = new Generator();
-            //generator.displayPermutations();
-            //generator.generateAll();
 
+            ///////////////////////////
             String str = "AB1";
             int minStrLength = 1;
             int maxStrLength = 3;
+
             Console.Write("All permutations with repetition of {0} are: \n", str);
             GFG.allLexicographic(str, minStrLength, maxStrLength);
             GFG.GetBound(5);
 
-            /*BruteForce bruteForce = new BruteForce("abc");
-            bruteForce.RunAlghoritm();*/
-
-
             Console.ReadLine();
+            ///////////////////////////
+
+            /*BruteForce bruteForce = new BruteForce("abc");
+            bruteForce.RunAlghoritm();
+            Console.ReadLine();*/
         }
 
         public static string CreateMD5(string input)
