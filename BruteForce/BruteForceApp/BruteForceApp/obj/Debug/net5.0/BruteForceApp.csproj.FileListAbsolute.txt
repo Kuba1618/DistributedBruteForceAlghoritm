@@ -1,0 +1,16 @@
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\obj\Debug\net5.0\BruteForceApp.csproj.AssemblyReference.cache
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\obj\Debug\net5.0\BruteForceApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\obj\Debug\net5.0\BruteForceApp.AssemblyInfoInputs.cache
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\obj\Debug\net5.0\BruteForceApp.AssemblyInfo.cs
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\obj\Debug\net5.0\BruteForceApp.csproj.CoreCompileInputs.cache
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\bin\Debug\net5.0\BruteForceApp.exe
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\bin\Debug\net5.0\BruteForceApp.deps.json
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\bin\Debug\net5.0\BruteForceApp.runtimeconfig.json
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\bin\Debug\net5.0\BruteForceApp.runtimeconfig.dev.json
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\bin\Debug\net5.0\BruteForceApp.dll
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\bin\Debug\net5.0\ref\BruteForceApp.dll
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\bin\Debug\net5.0\BruteForceApp.pdb
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\obj\Debug\net5.0\BruteForceApp.dll
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\obj\Debug\net5.0\ref\BruteForceApp.dll
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\obj\Debug\net5.0\BruteForceApp.pdb
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\BruteForce\BruteForceApp\BruteForceApp\obj\Debug\net5.0\BruteForceApp.genruntimeconfig.cache

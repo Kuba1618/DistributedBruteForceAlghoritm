@@ -32,3 +32,12 @@ D:\PŚK\PSR\Projekt\PROJEKT\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.csproj.GenerateRe
 D:\PŚK\PSR\Projekt\PROJEKT\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.csproj.CoreCompileInputs.cache
 D:\PŚK\PSR\Projekt\PROJEKT\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.exe
 D:\PŚK\PSR\Projekt\PROJEKT\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.pdb
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\tcp_v3\tcp_v3\bin\Debug\tcp_v3.exe
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\tcp_v3\tcp_v3\bin\Debug\tcp_v3.pdb
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.csproj.AssemblyReference.cache
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.Form1.resources
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\tcp_v3\tcp_v3\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.csproj.GenerateResource.cache
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.csproj.CoreCompileInputs.cache
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.exe
+D:\PŚK\PSR\Projekt\PROJEKT\DistributedBruteForceAlghoritm\tcp_v3\tcp_v3\obj\x86\Debug\tcp_v3.pdb

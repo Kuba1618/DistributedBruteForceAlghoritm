@@ -158,7 +158,7 @@ namespace tcp_v3
 
         public static string BreakPasswords()
         {
-            string path = @"D:\PŚK\PSR\Projekt\hasla1.txt";
+            string path = @"D:\PŚK\PSR\Projekt\hasla.txt";
             int numberOfFileLines = File.ReadLines(path).Count();
 
             DateTime start = DateTime.Now;
@@ -278,6 +278,11 @@ namespace tcp_v3
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBoxOdbior_TextChanged(object sender, EventArgs e)
         {
 
         }
