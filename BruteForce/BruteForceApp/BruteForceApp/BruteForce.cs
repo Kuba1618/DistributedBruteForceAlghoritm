@@ -8,5 +8,6 @@ namespace BruteForceApp
 {
     class BruteForce
     {
+
     }
 }

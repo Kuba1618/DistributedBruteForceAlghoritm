@@ -10,7 +10,10 @@ namespace BruteForceApp
         static void Main(string[] args)
         {
             // CallMD5();
-            CallListOfMD5();
+            //CallListOfMD5();
+            generateAlphabet();
+            //CallPermutationGenerator();
+
             Console.ReadLine();
         }
 
@@ -44,6 +47,43 @@ namespace BruteForceApp
             }
 
             return linesFromFile;
+        }
+
+        public static void generateAlphabet() 
+        {
+           String str = "ACB";
+           int minStrLength = 1;
+           int maxStrLength = 3;
+
+           Console.Write("All permutations with repetition of {0} are: \n", str);
+            Alphabet.allLexicographic(str, minStrLength, maxStrLength);
+            Alphabet.GetBoundFromFile(4);
+        }
+
+        public static void generateAplhabetFromRange()
+        {
+            String str = "ABC";
+            int minStrLength = 1;
+            int maxStrLength = 3;
+
+            Console.Write("All permutations with repetition of {0} are: \n", str);
+            Alphabet.allLexicographic(str, minStrLength, maxStrLength);
+            Alphabet.GetBoundFromFile(4);
+        }
+
+        public static void CallPermutationGenerator() 
+        {
+            List<char> alphabet = new List<char>() { 'A', 'B', 'C' };
+            int minLength = 1;
+            int maxLength = 3;
+            string startRange = "B";
+            string endRange = "CC";
+            List<string> permutations = PermutationsGenerator.GeneratePermutations(alphabet, minLength, maxLength, startRange, endRange);
+
+            foreach (string permutation in permutations)
+            {
+                Console.WriteLine(permutation);
+            }
         }
     }
 }
