@@ -5,18 +5,18 @@ namespace BruteForceApp
 {
     public class PermutationsGenerator
     {
-        public static List<string> GeneratePermutationsWithRepetitions(string startRange, string endRange)
+        public static List<string> GeneratePermutationsWithRepetitions(string alphabet,string startRange, string endRange)
         {
             List<string> permutations = new List<string>();
-
-            GeneratePermutationsWithRepetitionsHelper(startRange, endRange, "", permutations, Compare);
+             
+            GeneratePermutationsWithRepetitionsHelper(alphabet,startRange, endRange, "", permutations);
 
             return permutations;
         }
 
-        private static void GeneratePermutationsWithRepetitionsHelper(string startRange, string endRange, string current, List<string> permutations, Comparison<string> comparison)
+        private static void GeneratePermutationsWithRepetitionsHelper(string alphabet, string startRange, string endRange, string current, List<string> permutations)
         {
-            if (current.Length >= startRange.Length && comparison(current, startRange) >= 0 && comparison(current, endRange) <= 0)
+            if (current.Length >= startRange.Length && CompareTwoString(current, startRange) >= 0 && CompareTwoString(current, endRange) <= 0)
             {
                 permutations.Add(current);
             }
@@ -26,13 +26,13 @@ namespace BruteForceApp
                 return;
             }
 
-            for (char c = 'A'; c <= 'C'; c++)
+            for (int i = 0; i < alphabet.Length; i++)
             {
-                GeneratePermutationsWithRepetitionsHelper(startRange, endRange, current + c, permutations, comparison);
+                GeneratePermutationsWithRepetitionsHelper(alphabet, startRange, endRange, current + alphabet[i], permutations);
             }
         }
 
-        private static int Compare(string s1, string s2)
+        private static int CompareTwoString(string s1, string s2)
         {
             char[] charArray1 = s1.ToCharArray();
             char[] charArray2 = s2.ToCharArray();
@@ -54,7 +54,6 @@ namespace BruteForceApp
 
             return 0;
         }
-
         
     }
 }
