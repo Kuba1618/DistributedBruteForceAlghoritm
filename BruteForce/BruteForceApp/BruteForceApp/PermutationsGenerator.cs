@@ -1,47 +1,60 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BruteForceApp
 {
     public class PermutationsGenerator
     {
-        public static List<string> GeneratePermutations(List<char> alphabet, int minLength, int maxLength, string startRange, string endRange)
+        public static List<string> GeneratePermutationsWithRepetitions(string startRange, string endRange)
         {
             List<string> permutations = new List<string>();
-            for (int length = minLength; length <= maxLength; length++)
-            {
-                GeneratePermutationsHelper(alphabet, "", permutations, length, startRange, endRange);
-            }
+
+            GeneratePermutationsWithRepetitionsHelper(startRange, endRange, "", permutations, Compare);
+
             return permutations;
         }
 
-        private static void GeneratePermutationsHelper(List<char> alphabet, string currentPermutation, List<string> permutations, int length, string startRange, string endRange)
+        private static void GeneratePermutationsWithRepetitionsHelper(string startRange, string endRange, string current, List<string> permutations, Comparison<string> comparison)
         {
-            if (currentPermutation.Length == length)
+            if (current.Length >= startRange.Length && comparison(current, startRange) >= 0 && comparison(current, endRange) <= 0)
             {
-                if ((!string.IsNullOrEmpty(startRange) && string.Compare(currentPermutation, startRange) < 0) ||
-                    (!string.IsNullOrEmpty(endRange) && string.Compare(currentPermutation, endRange) > 0 && currentPermutation != endRange)) // zmieniony warunek dla endRange
-                {
-                    return;
-                }
+                permutations.Add(current);
+            }
 
-                permutations.Add(currentPermutation);
+            if (current.Length >= endRange.Length)
+            {
                 return;
             }
 
-            for (int i = 0; i < alphabet.Count; i++)
+            for (char c = 'A'; c <= 'C'; c++)
             {
-                char currentChar = alphabet[i];
-                alphabet.RemoveAt(i);
-
-                GeneratePermutationsHelper(alphabet, currentPermutation + currentChar, permutations, length, startRange, endRange);
-
-                alphabet.Insert(i, currentChar);
+                GeneratePermutationsWithRepetitionsHelper(startRange, endRange, current + c, permutations, comparison);
             }
         }
 
+        private static int Compare(string s1, string s2)
+        {
+            char[] charArray1 = s1.ToCharArray();
+            char[] charArray2 = s2.ToCharArray();
+
+            int minLength = Math.Min(charArray1.Length, charArray2.Length);
+
+            if (charArray1.Length < charArray2.Length)
+                return -1;
+            else if (charArray1.Length > charArray2.Length)
+                return 1;
+
+            for (int i = 0; i < minLength; i++)
+            {
+                if (charArray1[i] < charArray2[i])
+                    return -1;
+                else if (charArray1[i] > charArray2[i])
+                    return 1;
+            }
+
+            return 0;
+        }
+
+        
     }
 }
