@@ -50,10 +50,11 @@ namespace BruteForceApp
 
         public static void CallPermutationGenerator() 
         {
+            string alphabet = "ABD";
             string startRange = "A";
-            string endRange = "CC";
+            string endRange = "DD";
 
-            List<string> permutations = PermutationsGenerator.GeneratePermutationsWithRepetitions("ABC",startRange, endRange);
+            List<string> permutations = PermutationsGenerator.GeneratePermutationsWithRepetitions(alphabet,startRange, endRange);
 
             foreach (string permutation in permutations)
             {
@@ -66,8 +67,8 @@ namespace BruteForceApp
 
 //@ToDo #1 Haszowanie LISTY haseł --> Done.
 //
-//@ToDo #2 wdrożyć haszowanie do algorytmu Bruteforce
+//@ToDo #2 wdrożyć haszowanie do algorytmu Bruteforce 
 //
 //@ToDo #3 znaleść sposób jak ograniczyć metodę czasowo
 //
-//@ToDo #4 generowanie alfabetu na podstawie zakresu
+//@ToDo #4 generowanie alfabetu na podstawie zakresu --> Done.
