@@ -6,7 +6,7 @@ namespace BruteForceApp
 {
     class MD5
     {
-        public static List<String> CreateMD5(List<String> listOfPasswords)
+        public static List<String> CreateListOfMD5(List<String> listOfPasswords)
         {
             List<string> passwordConvertedOnMD5 = new List<string>();
             

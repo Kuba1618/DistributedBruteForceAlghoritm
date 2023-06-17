@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace BruteForceApp
 {
@@ -11,22 +12,23 @@ namespace BruteForceApp
         {
             // CallMD5();
             //CallListOfMD5();
-            CallPermutationGenerator();
+            //CallPermutationGenerator();
+            //TimeExecutor.CallTimeExecutor();
+            CallBruteForce();
             Console.ReadLine();
         }
 
-
-        public static void CallMD5()
+/*        public static void CallMD5()
         {
             string password = "AlaMaKota1234!";
             string s = MD5.CreateMD5(password);
             Console.WriteLine($"MD5 hash for {password}: {s}");
-        }
+        }*/
 
         public static void CallListOfMD5()
         {
             List<string> passwords = readFromFile();
-            passwords = MD5.CreateMD5(passwords);
+            passwords = MD5.CreateListOfMD5(passwords);
             foreach (string s in passwords)
             {
                 Console.WriteLine("{0}", s);
@@ -35,17 +37,26 @@ namespace BruteForceApp
 
         public static List<string> readFromFile()
         {
-            List<string> linesFromFile = new List<string>();
-            string path = @"D:\PŚK\PSR\Projekt\hasla.txt";
-            int numberOfFileLines = File.ReadLines(path).Count();
+            List<string> lines = new List<string>();
+            string filePath = @"D:\PŚK\PSR\Projekt\hasla223.txt";
 
-            for (int i = 1; i < numberOfFileLines; i++)
+            try
             {
-                string password = File.ReadLines(path).Skip(i - 1).Take(1).First();
-                linesFromFile.Add(password);
+                using (StreamReader sr = new StreamReader(filePath, Encoding.UTF8))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Wystąpił błąd podczas odczytu pliku: " + ex.Message);
             }
 
-            return linesFromFile;
+            return lines;
         }
 
         public static void CallPermutationGenerator() 
@@ -62,13 +73,17 @@ namespace BruteForceApp
             }
         }
 
+        public static void CallBruteForce()
+        {
+            List<string> passwords = readFromFile();
+            string alphabet = "'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ \t\n\r\x0b\x0c";
+            //'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ \t\n\r\x0b\x0c
+            string startRange = "A";
+            string endRange = "ACC";
+            BruteForce.Run(passwords,alphabet,startRange,endRange);
+        }
+
     }
 }
 
-//@ToDo #1 Haszowanie LISTY haseł --> Done.
-//
-//@ToDo #2 wdrożyć haszowanie do algorytmu Bruteforce 
-//
-//@ToDo #3 znaleść sposób jak ograniczyć metodę czasowo
-//
-//@ToDo #4 generowanie alfabetu na podstawie zakresu --> Done.
+//@ToDo #2 znaleść sposób jak ograniczyć metodę czasowo
