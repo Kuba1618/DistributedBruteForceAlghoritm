@@ -10,20 +10,21 @@ namespace BruteForceApp
     {
         static void Main(string[] args)
         {
-            // CallMD5();
+            //CallMD5();
             //CallListOfMD5();
             //CallPermutationGenerator();
             //TimeExecutor.CallTimeExecutor();
             CallBruteForce();
+            Console.WriteLine("Wściśnij enter aby zakończyć działanie programu.");
             Console.ReadLine();
         }
 
-/*        public static void CallMD5()
+        public static void CallMD5()
         {
             string password = "AlaMaKota1234!";
             string s = MD5.CreateMD5(password);
             Console.WriteLine($"MD5 hash for {password}: {s}");
-        }*/
+        }
 
         public static void CallListOfMD5()
         {
@@ -61,9 +62,9 @@ namespace BruteForceApp
 
         public static void CallPermutationGenerator() 
         {
-            string alphabet = "ABD";
+            string alphabet = "56789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&";
             string startRange = "A";
-            string endRange = "DD";
+            string endRange = "JABE";
 
             List<string> permutations = PermutationsGenerator.GeneratePermutationsWithRepetitions(alphabet,startRange, endRange);
 
@@ -75,11 +76,13 @@ namespace BruteForceApp
 
         public static void CallBruteForce()
         {
+            //Ilość rdzeni procesora
+            //Console.WriteLine(System.Environment.GetEnvironmentVariable("NUMBER_OF_PROCESSORS")); 
             List<string> passwords = readFromFile();
-            string alphabet = "'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ \t\n\r\x0b\x0c";
+            string alphabet = "56789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&";
             //'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ \t\n\r\x0b\x0c
             string startRange = "A";
-            string endRange = "ACC";
+            string endRange = "JABE";
             BruteForce.Run(passwords,alphabet,startRange,endRange);
         }
 

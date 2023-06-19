@@ -32,7 +32,7 @@ namespace BruteForceApp
                 
             while(!token.IsCancellationRequested)
             {
-                   
+                      
             }
             
             Console.WriteLine("Wykrycie upłynięcia limitu czasu");
