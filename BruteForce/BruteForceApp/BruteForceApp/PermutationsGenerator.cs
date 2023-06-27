@@ -5,11 +5,11 @@ namespace BruteForceApp
 {
     public class PermutationsGenerator
     {
-        public static List<string> GeneratePermutationsWithRepetitions(string alphabet,string startRange, string endRange)
+        public static List<string> GeneratePermutationsWithRepetitions(string alphabet, string startRange, string endRange)
         {
             List<string> permutations = new List<string>();
-             
-            GeneratePermutationsWithRepetitionsHelper(alphabet,startRange, endRange, "", permutations);
+
+            GeneratePermutationsWithRepetitionsHelper(alphabet, startRange, endRange, "", permutations);
 
             return permutations;
         }
@@ -54,6 +54,6 @@ namespace BruteForceApp
 
             return 0;
         }
-        
+
     }
 }

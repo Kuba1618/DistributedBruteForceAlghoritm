@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Net.Sockets;
 using System.Threading;
 using System.Collections;
 using System.Net;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
+
 
 namespace tcp_v3
 {
@@ -50,7 +48,6 @@ namespace tcp_v3
             idPolaczenia = id_pol;
         }
     }
-
 
     class PolaczenieUstanowioneEventArgs : EventArgs
     {
@@ -151,7 +148,7 @@ namespace tcp_v3
                 if (kli.tcpKlient.Connected)
                 {
                     kom.czasNadania = DateTime.Now;
-                    bf.Serialize(kli.tcpKlient.GetStream(), kom);
+                    bf.Serialize(kli.tcpKlient.GetStream(), kom + kli.tcpKlient.Client.RemoteEndPoint.ToString());
                 }
             }
             return true;

@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Net.Sockets;
-using System.Threading;
-using System.Net;
 using WindowsFormsApplication1;
 using System.IO;
 
@@ -158,7 +152,7 @@ namespace tcp_v3
 
         public static string BreakPasswords()
         {
-            string path = @"D:\PŚK\PSR\Projekt\hasla.txt";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString() + "\\passwordsToBreak" + ".txt"; 
             int numberOfFileLines = File.ReadLines(path).Count();
 
             DateTime start = DateTime.Now;

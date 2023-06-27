@@ -8,7 +8,7 @@ namespace BruteForceApp
         public static void Run(List<string> passwords, string alphabet, string startRange, string endRange)
         {
             List<string> listOfPermutations = PermutationsGenerator.GeneratePermutationsWithRepetitions(alphabet, startRange, endRange); //generowanie permutacji
-
+            Console.WriteLine("Koniec generowania permutacji");
             passwords = MD5.CreateListOfMD5(passwords); //pobiera w parametrze listę haseł, zamienia ją na listę hash'y i zapisuje do tej samej listy
             listOfPermutations = MD5.CreateListOfMD5(listOfPermutations); //jak powyżej ... tylko dla listy permutacji 
             Console.WriteLine("Skończyłem generowanie permutacji i haszowanie. Zaczynam łamać hasła ...\n");
@@ -35,7 +35,7 @@ namespace BruteForceApp
         private static bool CompareHash(string password, List<string> listOfPermutations)
         {
             DateTime startTime = DateTime.Now;
-            TimeSpan timeout = TimeSpan.FromSeconds(1);
+            TimeSpan timeout = TimeSpan.FromSeconds(2);
 
             foreach (string permutation in listOfPermutations)
             {

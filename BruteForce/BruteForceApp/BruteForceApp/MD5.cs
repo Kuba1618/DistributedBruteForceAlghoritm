@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BruteForceApp
 {
@@ -9,11 +10,11 @@ namespace BruteForceApp
         public static List<String> CreateListOfMD5(List<String> listOfPasswords)
         {
             List<string> passwordConvertedOnMD5 = new List<string>();
-            
-            foreach (string password in listOfPasswords)
+
+            Parallel.ForEach(listOfPasswords, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }, password =>
             {
                 passwordConvertedOnMD5.Add(CreateMD5(password));
-            }
+            });
 
             return passwordConvertedOnMD5;
         }

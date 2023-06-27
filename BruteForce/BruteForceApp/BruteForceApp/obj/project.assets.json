@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PŚK\\PSR\\Projekt\\PROJEKT\\DistributedBruteForceAlghoritm\\BruteForce\\BruteForceApp\\BruteForceApp\\BruteForceApp.csproj",
+      "projectUniqueName": "D:\\PSK\\PSR\\Projekt\\PROJEKT\\DistributedBruteForceAlghoritm\\BruteForce\\BruteForceApp\\BruteForceApp\\BruteForceApp.csproj",
       "projectName": "BruteForceApp",
-      "projectPath": "D:\\PŚK\\PSR\\Projekt\\PROJEKT\\DistributedBruteForceAlghoritm\\BruteForce\\BruteForceApp\\BruteForceApp\\BruteForceApp.csproj",
+      "projectPath": "D:\\PSK\\PSR\\Projekt\\PROJEKT\\DistributedBruteForceAlghoritm\\BruteForce\\BruteForceApp\\BruteForceApp\\BruteForceApp.csproj",
       "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-      "outputPath": "D:\\PŚK\\PSR\\Projekt\\PROJEKT\\DistributedBruteForceAlghoritm\\BruteForce\\BruteForceApp\\BruteForceApp\\obj\\",
+      "outputPath": "D:\\PSK\\PSR\\Projekt\\PROJEKT\\DistributedBruteForceAlghoritm\\BruteForce\\BruteForceApp\\BruteForceApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jakub\\AppData\\Roaming\\NuGet\\NuGet.Config",

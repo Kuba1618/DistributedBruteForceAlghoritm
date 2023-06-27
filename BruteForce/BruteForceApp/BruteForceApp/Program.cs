@@ -39,7 +39,7 @@ namespace BruteForceApp
         public static List<string> readFromFile()
         {
             List<string> lines = new List<string>();
-            string filePath = @"D:\PŚK\PSR\Projekt\hasla223.txt";
+            string filePath = @"D:\PSK\PSR\Projekt\hasla223.txt";
 
             try
             {
@@ -62,9 +62,9 @@ namespace BruteForceApp
 
         public static void CallPermutationGenerator() 
         {
-            string alphabet = "56789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&";
-            string startRange = "A";
-            string endRange = "JABE";
+            string alphabet = "ABC";
+            string startRange = "AC";
+            string endRange = "AAA";
 
             List<string> permutations = PermutationsGenerator.GeneratePermutationsWithRepetitions(alphabet,startRange, endRange);
 
@@ -79,10 +79,10 @@ namespace BruteForceApp
             //Ilość rdzeni procesora
             //Console.WriteLine(System.Environment.GetEnvironmentVariable("NUMBER_OF_PROCESSORS")); 
             List<string> passwords = readFromFile();
-            string alphabet = "56789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&";
             //'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ \t\n\r\x0b\x0c
-            string startRange = "A";
-            string endRange = "JABE";
+            string alphabet = "ABC";
+            string startRange = "AC";
+            string endRange = "AAA";
             BruteForce.Run(passwords,alphabet,startRange,endRange);
         }
 
